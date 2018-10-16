@@ -1,0 +1,190 @@
+// out: main.css
+@font-face {
+    font-family: "San Francisco Display Ultralight";
+    font-style: normal;
+    font-weight: 400;
+    src: url(https://applesocial.s3.amazonaws.com/assets/styles/fonts/sanfrancisco/sanfranciscodisplay-ultralight-webfont.eot?#iefix) format("embedded-opentype"), url(https://applesocial.s3.amazonaws.com/assets/styles/fonts/sanfrancisco/sanfranciscodisplay-ultralight-webfont.woff2) format("woff2"), url(https://applesocial.s3.amazonaws.com/assets/styles/fonts/sanfrancisco/sanfranciscodisplay-ultralight-webfont.woff) format("woff"), url(https://applesocial.s3.amazonaws.com/assets/styles/fonts/sanfrancisco/sanfranciscodisplay-ultralight-webfont.ttf) format("truetype"), url("fonts/sanfrancisco/sanfranciscodisplay-ultralight-webfont.svg#San Francisco Display Ultralight") format("svg")
+}
+
+@font-face {
+    font-family: "San Francisco Display Thin";
+    font-style: normal;
+    font-weight: 400;
+    src: url(https://applesocial.s3.amazonaws.com/assets/styles/fonts/sanfrancisco/sanfranciscodisplay-thin-webfont.eot?#iefix) format("embedded-opentype"), url(https://applesocial.s3.amazonaws.com/assets/styles/fonts/sanfrancisco/sanfranciscodisplay-thin-webfont.woff2) format("woff2"), url(https://applesocial.s3.amazonaws.com/assets/styles/fonts/sanfrancisco/sanfranciscodisplay-thin-webfont.woff) format("woff"), url(https://applesocial.s3.amazonaws.com/assets/styles/fonts/sanfrancisco/sanfranciscodisplay-thin-webfont.ttf) format("truetype"), url("fonts/sanfrancisco/sanfranciscodisplay-thin-webfont.svg#San Francisco Display Thin") format("svg")
+}
+
+@font-face {
+    font-family: "San Francisco Display Medium";
+    font-style: normal;
+    font-weight: 400;
+    src: url(https://applesocial.s3.amazonaws.com/assets/styles/fonts/sanfrancisco/sanfranciscodisplay-medium-webfont.eot?#iefix) format("embedded-opentype"), url(https://applesocial.s3.amazonaws.com/assets/styles/fonts/sanfrancisco/sanfranciscodisplay-medium-webfont.woff2) format("woff2"), url(https://applesocial.s3.amazonaws.com/assets/styles/fonts/sanfrancisco/sanfranciscodisplay-medium-webfont.woff) format("woff"), url(https://applesocial.s3.amazonaws.com/assets/styles/fonts/sanfrancisco/sanfranciscodisplay-medium-webfont.ttf) format("truetype"), url("fonts/sanfrancisco/sanfranciscodisplay-medium-webfont.svg#San Francisco Display Medium") format("svg")
+}
+
+@font-face {
+    font-family: "San Francisco Display Semibold";
+    font-style: normal;
+    font-weight: 400;
+    src: url(https://applesocial.s3.amazonaws.com/assets/styles/fonts/sanfrancisco/sanfranciscodisplay-semibold-webfont.eot?#iefix) format("embedded-opentype"), url(https://applesocial.s3.amazonaws.com/assets/styles/fonts/sanfrancisco/sanfranciscodisplay-semibold-webfont.woff2) format("woff2"), url(https://applesocial.s3.amazonaws.com/assets/styles/fonts/sanfrancisco/sanfranciscodisplay-semibold-webfont.woff) format("woff"), url(https://applesocial.s3.amazonaws.com/assets/styles/fonts/sanfrancisco/sanfranciscodisplay-semibold-webfont.ttf) format("truetype"), url("fonts/sanfrancisco/sanfranciscodisplay-semibold-webfont.svg#San Francisco Display Semibold") format("svg")
+}
+
+@font-face {
+    font-family: "San Francisco Display Bold";
+    font-style: normal;
+    font-weight: 400;
+    src: url(https://applesocial.s3.amazonaws.com/assets/styles/fonts/sanfrancisco/sanfranciscodisplay-bold-webfont.eot?#iefix) format("embedded-opentype"), url(https://applesocial.s3.amazonaws.com/assets/styles/fonts/sanfrancisco/sanfranciscodisplay-bold-webfont.woff2) format("woff2"), url(https://applesocial.s3.amazonaws.com/assets/styles/fonts/sanfrancisco/sanfranciscodisplay-bold-webfont.woff) format("woff"), url(https://applesocial.s3.amazonaws.com/assets/styles/fonts/sanfrancisco/sanfranciscodisplay-bold-webfont.ttf) format("truetype"), url("fonts/sanfrancisco/sanfranciscodisplay-bold-webfont.svg#San Francisco Display Bold") format("svg")
+}
+
+@bgColor: #F2C94C;
+@searchTitleColor: white;
+
+.setDimension(@width, @height) {
+    width: @width;
+    height: @height;
+}
+
+.centrar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.arriba {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.abajo {
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+}
+
+.centrarColumna {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+body {
+    .centrar;
+    background-color: @bgColor;
+    font-family: "San Francisco Display Bold";
+    .setDimension(100%, 100vh);
+    margin: 0px;
+}
+
+.box {
+    .setDimension(100%, 100%);
+    .centrarColumna;
+}
+
+.search-title {
+    .setDimension(100%, 20vh);
+    .abajo;
+    position: relative;
+    font-size: 48px;
+    font-weight: bold;
+    color: @searchTitleColor;
+}
+
+.search {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+    .setDimension(100%, 100%);
+}
+
+.search-box {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    .setDimension(100%, 80px);
+}
+
+.imdb-text {
+    color: #1f1f1f;
+    padding-right: 20px;
+}
+.inputSearch {
+    .setDimension(60%, 70px);
+    font-size: 22px;
+    font-weight: 800;
+    color: black;
+    background-color: white;
+    border: 0px solid white;
+    text-align: center;
+    border-radius: 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-family: "San Francisco Display UltraLight";
+    box-shadow: inset 0px 0px 8px -2px #1f1f1f;
+}
+
+::placeholder {
+    color: black;
+    font-weight: 200;
+}
+
+.inputSearch:focus {
+    border-radius: 50px;
+    outline: none;
+}
+
+.fa-searchengin {
+    position: relative;
+    left: -50px;
+    font-size: 24px;
+    top: 25px;
+}
+
+.result {
+    .setDimension(80%, 70%);
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    border-radius: 50px 50px 0px 0px;
+    box-shadow: inset 0px 0px 8px -2px #1f1f1f;
+    overflow: scroll;
+}
+
+h2 {
+    font-family: "San Francisco Display UltraLight";
+}
+
+.result-title {
+    width: 10vw;
+}
+
+table { 
+	width: 90%; 
+	border-collapse: collapse; 
+    margin:50px auto;
+    font-family: "San Francisco Display UltraLight";
+}
+
+/* Zebra striping */
+tr:nth-of-type(even) { 
+	background: #1f1f1f; 
+}
+tr:nth-of-type(odd) { 
+	background: #313131; 
+}
+
+th { 
+	background: #F2C94C; 
+	color: white; 
+	font-weight: bold; 
+	}
+
+td, th { 
+	padding: 10px;
+	text-align: left; 
+    font-size: 18px;
+    color: white;
+    font-family: "San Francisco Display Bold";
+}
